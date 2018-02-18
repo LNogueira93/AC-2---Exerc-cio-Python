@@ -1,6 +1,3 @@
-# AC-2---Exerc-cio-Python
-Avaliação continuada - LP2
-
 # 1800180 - Lucas Moises Nogueira
 # 1800182 - Jady Pelissari Redini
 

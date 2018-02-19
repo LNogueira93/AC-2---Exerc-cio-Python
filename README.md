@@ -94,3 +94,77 @@ print("Resposta 4: ", r4)
 print("Resposta 5: ", r5)
 print("Itens da lista", lista)
 print ('Repetidos: ', repetidos.count[1])
+
+
+
+
+___-----------------------------------------------------------------------------
+
+
+
+
+question = ["Telefonou para a vítima?", "Esteve no local do crime?", "Mora perto da vítima?", "Devia para a vítima?", "Já trabalhou com a vítima?"]
+answer = []
+def questions(question):
+  for x in range(len(question)):
+    print(question[x])
+    answer_x = input('1 = Sim/0 = Não: ')
+    answer.append(answer_x)
+
+  
+def quantidade_sim(list):
+  # remova o pass quando for escrever seu código
+  count = 0
+  for count in range(len(answer)):
+    if answer[count] == '1' or answer[count] == 'Sim' or answer[count] == 'sim':
+        count += 1
+  return count
+  
+
+# função querecebe a quantidade de respostas positivas e retorna sua classificação
+# complete a declaração e o corpo da função
+# mas não altere o nome dessa função
+def classificacao(count):
+  # remova o pass quando for escrever seu código
+  quantos = answer.count('1')
+
+  classificacao = ""
+  if quantos == 0:
+    classificacao = "Inocente"
+  elif quantos == 1:
+    classificacao = "Inocente"
+  elif quantos == 2:
+    classificacao = "Suspeito"
+  elif quantos == 3:
+    classificacao = "Cúmplice"
+  elif quantos == 4:
+    classificacao = "Cúmplice"
+  elif quantos == 5:
+    classificacao = "Assasino"
+  return classificacao
+
+# para executar testes, mantenha if name == 'main':
+# para executar sem os testes remova if name == 'main':
+#if name == 'main':
+  # faça seus testes aqui
+  # remova o pass quando for escrever seu código
+
+questions(question)
+print (classificacao(quantidade_sim(answer)))
+
+print ("Quantidade de SIM: ",answer.count('1'))
+#quantos = answer.count('1')
+#print("Quantos: ",quantos)
+
+#if quantos == 0:
+#    print ("Ele é Inocente")
+#elif quantos == 1:
+#    print ("Ele é Inocente")
+#elif quantos == 2:
+#    print ("Ele é Suspeito")
+#elif quantos == 3:
+#    print ("Ele é Cúmplice")
+#elif quantos == 4:
+#    print ("Ele é Cúmplice")
+#elif quantos == 5:
+#    print ("Ele é Assasino")
